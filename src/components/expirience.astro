@@ -1,0 +1,21 @@
+---
+import ExpirienceItem from "./expirienceItem.astro"
+
+const EXPIRIENCE =[
+    {
+        Date: '04/2023',
+        title: 'Front-end developer National Register Center',
+        description:'As a front-end developer at the National Registry Center, I contributed to the development and maintenance of efficient and attractive user interfaces for critical web applications. My responsibilities included: Developing responsive interfaces, performance optimization, integrating modern technologies, and resolving technical issues.',
+        link: '',
+    },
+]
+---
+<ol class="relative border-s border-gray-200 ml-1"> 
+    {
+        EXPIRIENCE.map(Expirience=> (
+            <li class="mb-10 ms-4">
+                <ExpirienceItem {...Expirience}/>
+            </li>
+        ))
+    }                 
+   

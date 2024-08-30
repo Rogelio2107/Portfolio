@@ -1,0 +1,70 @@
+---
+import { Icon } from 'astro-icon/components'
+import JS from '../icons/JS.astro'
+import css from '../icons/css.astro'
+import TypeScript from '../icons/TypeScript.astro'
+import HTML from '../icons/HTML.astro'
+const TAGS ={
+    JAVASCRIPT: {
+        name: "Javascript",
+        class: "bg-black text-white",
+        icon: JS
+    },
+    CSS :{
+        name: "CSS",
+        class: "bg-black text-white",
+        icon: css
+    },
+    TYPESCRIPT:{
+        name:"typescript",
+        class: "bg-black text-white",
+        icon: TypeScript
+    },
+    HTML:{
+        name: "HTML",
+        class: "bg-black text-white",
+        icon: HTML
+    }
+
+}
+const PROJECTS = [
+    {
+        title: 'Shopping cart',
+        description: 'A shopping cart web application with TypeScript',
+        link: 'https://celebrated-stardust-cec045.netlify.app/',
+        github: 'https://github.com/Rogelio2107?tab=repositories',
+        image: '/projects/svgl.webp',
+        tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.TYPESCRIPT, TAGS.HTML]
+    },
+    {
+        title: 'EMAIL Sender',
+        description: 'An email aplication',
+        link: 'https://rad-heliotrope-d18bef.netlify.app/',
+        github: 'https://github.com/Rogelio2107?tab=repositories',
+        image: '/projects/Email.png',
+        tags: [TAGS.JAVASCRIPT, TAGS.CSS, TAGS.TYPESCRIPT, TAGS.HTML]
+    },
+
+];
+---
+{
+    PROJECTS.map(({ image, title, description, tags, link }) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-blue-600">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row">
+                {tags.map((tag) => (
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-2 px-1`}>
+                            <tag.icon class="size-4" /> {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <a href={link} target="_blank" rel="noopener noreferrer">
+                <img class=" py-5 rounded shadow-2xl hover:scale-105 transition-transform duration-300 ease-in-out  shadow-white/10" src={image} alt={`Project screenshot ${image}`} />
+            </a>
+        </article>
+    ))
+}
+

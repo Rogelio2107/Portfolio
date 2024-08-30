@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Badge from '../components/Badge.astro';
+import Linkedin from '../icons/Linkedin.astro';
+import Social from '../icons/Social.astro';
+import Github from '../icons/Github.astro';
+import Mail from '../icons/Mail.astro'
+import Expirience from '../components/expirience.astro';
+import BriefCase from '../icons/BriefCase.astro';
+import CodeIcon from '../components/Code.astro';
+import Projects from '../components/Projects.astro';
+
+
+---
+
+<Layout title="Rogelio portfolio - Developer and web programmer"
+description="hire me to create your web application ">
+	<main class="px-4">
+	
+			<SectionContainer class= "py-44 pb-32">
+				<img class="rounded-full size-12 mb-4" src="https://i.pinimg.com/236x/bf/57/02/bf57026ee75af2f414000cec322f7404.jpg" 
+				alt="Rogelio Photo"
+				/>
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+				Hey, I'm Rogelio <a href="https://www.linkedin.com/in/rogelio-quijada-002851236/"
+				target="_blank"
+				rel="noopener"
+				 class="flex justify-center items-center">
+				 <Badge>Work ready</Badge></a>
+			</h1>
+			
+			<h2 class=" text-xl lg:text-2xl  text-wrap max-w-[700px]">
+				<span class="text-yellow-600">I'm a Jr front-end developer</span> <span class="opacity-80">and student of robotic Engineer.
+				 From </span> <span class="text-blue-600">San Salvador, El Salvador.</span> I specialize in UI design responsive 
+				 web desing and visual development</h2>
+	
+				 <nav class="flex gap-6 mt-9 flex-wrap">
+					<Social href="https://www.linkedin.com/in/rogelio-quijada-002851236/">
+						<Linkedin class = "size-4 md:size-6"/>Linkedin
+					</Social>
+					<Social href ="https://github.com/Rogelio2107">
+						<Github class = "size-4 md:size-6"/>Github
+					</Social>
+					<Social href ="https://github.com/Rogelio2107">
+						<Mail class = "size-4 md:size-6"/>rogelio.rhq@gmail.com
+					</Social>
+				 </nav>
+			</SectionContainer>
+		
+			<SectionContainer id = "experience">
+				<h2 class= " text-3xl  font-semibold mb-4  flex gap-x-2">
+					<BriefCase class="size-7 flex gap-x-2"/>
+						Experience</h2>
+		   <Expirience/>
+			</SectionContainer>
+			
+			<SectionContainer id = "projects">
+				<h2 class= " text-3xl  font-semibold mb-4  flex gap-x-2">
+					<CodeIcon class="size-7 flex gap-x-2"/>
+					Projects</h2>
+		   <Projects/>
+			</SectionContainer>
+	</main>
+</Layout>
+
